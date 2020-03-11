@@ -1,20 +1,11 @@
-<h4>Amigos</h4>
-<ng-container *ngFor="let user of friends">
-  <div>
-    <a routerLink="/conversation/{{user.uid}}" *ngIf="user.friend">
-        {{ user.name }} - {{ user.email }} -{{user.friend}}
-    </a>
-</div>
-
-
-
-</ng-container>
+<input type="text" placeholder="Buscar amigos" [(ngModel)]="query">
 <br>
-<h4>No agregados</h4>
-<ng-container *ngFor="let user of friends">
-    <div>
-    <a  routerLink="/conversation/{{user.uid}}" *ngIf="!user.friend">
+<h4>Amigos</h4>
+<ng-container *ngFor="let user of friends | search:query" >
+  <div>
+    <a routerLink="/conversation/{{user.uid}}" >
         {{ user.name }} - {{ user.email }} -{{user.friend}}
     </a>
 </div>
-</ng-container>
+
+
