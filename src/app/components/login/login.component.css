@@ -7,10 +7,40 @@ COLOR  #041256 azul  #57ffc2 verde
      background-size: contain;
      background-repeat: no-repeat;
 }
+
 .login_container{padding: 1em;}
-.avatar{padding: 0.5em;
+
+.avatar{
+
+    padding: 0.5em;
     border: 2px solid #009688;
+    -webkit-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+border-radius: 30px;
+display: flex;
+justify-content: center;
 }
+
+.avatar img{
+    max-height: 300px;
+    margin: 0 auto;
+}
+
+.login_form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+
+@media(min-width:675px){
+    .login_form{
+        width: 80%;
+    }
+}
+
 /* 
 
 .avatar-image{} 
