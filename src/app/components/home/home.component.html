@@ -1,1 +1,20 @@
-<p>home works!</p>
+<h4>Amigos</h4>
+<ng-container *ngFor="let user of friends">
+  <div>
+    <a routerLink="/conversation/{{user.uid}}" *ngIf="user.friend">
+        {{ user.name }} - {{ user.email }} -{{user.friend}}
+    </a>
+</div>
+
+
+
+</ng-container>
+<br>
+<h4>No agregados</h4>
+<ng-container *ngFor="let user of friends">
+    <div>
+    <a  routerLink="/conversation/{{user.uid}}" *ngIf="!user.friend">
+        {{ user.name }} - {{ user.email }} -{{user.friend}}
+    </a>
+</div>
+</ng-container>
