@@ -1,15 +1,17 @@
 .menu__container{
     height: 60px;
     position: fixed;
-    width: 100%;
+    
     z-index:1;
     top:0;
     padding: 5px !important;
     background-color: #57ffc2;
+    width: 100%;
+    position: 0;
 }
 
 .item-logo{
-    margin-left: 15px;
+    margin-left: 10px;
     height: 50px;
     display: flex;
     width: 100px;
@@ -18,23 +20,21 @@
 }
 
 .main-logo{
-    width: 50px;
+    width: 30px;
   
 }
-.menu__container{
+.menu__container-items{
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.menu__container .item{
-    margin-left: 1.5em;
-}
+
 
 
 .item i{
     color:#FF00CC ;
-    margin-right: 0.5em;
+   
 }
 .item i:hover{
   zoom:0.9
@@ -42,15 +42,12 @@
 
 .item a {
     color:#041256;
-    zoom: 1.1;
-    letter-spacing: 1px;
+    
 }
 
 .item a:hover {
     font-weight: 600;
-    font-size: 1.25rem;
-      zoom: 1.15;
-      letter-spacing: 1.1px;
+ 
       text-decoration: underline;
   
   }

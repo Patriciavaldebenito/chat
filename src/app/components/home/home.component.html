@@ -1,9 +1,7 @@
-
-
 <div class="home__container">
- <div class="home__container__header">
-   <div class="home__container__header-avatar">
-      <div class="row">
+  <div class="home__container__header">
+    <div class="home__container__header-avatar">
+      <div class="row max-0">
         <div class="col-sm-3">
           <img class="header-image" src="../../../assets/images/recursos_varios/women_more_dialog.png" alt="">
         </div>
@@ -16,30 +14,37 @@
           </div>
         </div>
       </div>
-   </div>
- </div>
+    </div>
+  </div>
 
- <div class="home__container__main">
-   <div class="home__container__main-search">
-     <div class="row">
-       <div class="col-10"> 
+  <div class="home__container__main">
+    <div class="home__container__main-search">
+      <div class="row mx-0">
+        <div class="col-10">
           <input type="text" class="form-control" placeholder="Buscar amigos" [(ngModel)]="query">
         </div>
         <div class="col-2">
           <img src="../../../assets/images/icon/add.png" class="icon" alt="">
         </div>
-     </div>
-  
-  
-   </div>
- </div>
-<!-- 
-<h4>Amigos</h4>
-<ng-container *ngFor="let user of friends | search:query" >
-  <div>
-    <a routerLink="/conversation/{{user.uid}}" >
-        {{ user.name }} - {{ user.email }} -{{user.friend}}
-    </a>
-</div>
-</ng-container> -->
+      </div>
+
+
+    </div>
+
+    <hr>
+
+    <div class="home__container__main-friends">
+
+      <h4 class="colorwhite">Amigos  {{ friends.length }} / {{ friends.length }}</h4>
+      <ng-container *ngFor="let user of friends | search:query">
+        <div class="friend">
+          <a class ="colorwhite" routerLink="/conversation/{{user.uid}}">
+            <img class="mright15 status__friend desconnect"src="../../../assets/images/icon/circle_red.jpg" alt="">
+            {{ user.name }} - {{ user.email }} -{{user.friend}}
+          </a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
 </div>
