@@ -2,46 +2,93 @@
 COLOR  #041256 azul  #57ffc2 verde
 */
 .login{
+    height: calc(100vh - 50px);
     background: rgb(4,18,86);
     background: radial-gradient(circle, rgba(4,18,86,1) 0%, rgba(87,255,194,1) 100%);
      background-size: contain;
      background-repeat: no-repeat;
 }
 
-.login_container{padding: 1em;}
+
 
 .avatar{
-
     padding: 0.5em;
-    border: 2px solid #009688;
-    -webkit-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
-border-radius: 30px;
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
-.avatar img{
-    max-height: 300px;
+.avatar-img{
+    max-height: 250px;
+    margin-top:1rem;
     margin: 0 auto;
 }
 
-.login_form{
+.login__container{
+    height: 100%;
+    display:flex;
+    padding: 2em 0em;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+ p a{
+    font-weight: 550;
+}
+
+p a:hover{
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.login__container-form{
     width: 90%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
 
-
-@media(min-width:675px){
-    .login_form{
+.btn__section {
+     margin-top:2rem;
+  
+ }
+.btn__section a{
+    /* margin-top:2rem;*/
+     padding: 0.75em 1em;
+     border-radius: 10px;
+     width: 100%;
+     background:  #57ffc2;
+     border:  #57ffc2;
+     color: #041256;
+     font-weight: 700;
+     letter-spacing: 1px;
+ }
+@media(min-width:577px){
+  
+    .avatar{
+        max-width: 350px;
+        margin: 0 auto;
+        border-bottom: 2px solid #009688;
+         -webkit-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75); 
+        box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75); 
+        border-radius: 30px;
+    }
+    .avatar img{
+        max-height: 300px;
+        margin: 0 auto;
+    }
+    .login__container-form{
         width: 80%;
+    }
+    .login-title{margin-bottom: 16px;}
+    
+    .btn__section {
+        margin-top:3rem;
+    
     }
 }
 
-/* 
-
-.avatar-image{} 
-*/
+@media(min-width:992px){
+    .login__container-form{
+        width: 50%;
+    }
+}

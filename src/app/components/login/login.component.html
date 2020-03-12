@@ -1,27 +1,38 @@
 
 
 <div class="login">
-    <div class="login_container">
-        <div class="row justify-content-md-center">
+
+    <div class="login__container">
+       
+        <div class="row justify-content-md-center mx-0">
             <div class="col-md-3">
                 <div class="avatar mt-2 mb-2">
-                    <img class="avatar-image img-fluid" src="../../../assets/images/recursos_varios/women_more_dialog.png" alt="">
+                    <img class="avatar-img img-fluid" src="../../../assets/images/recursos_varios/women_more_dialog.png" alt="imagen logo pantalla login">
                 </div>
-
             </div>
         </div>
-        <div class="row justify-content-md-center">
+
+        <div class="row justify-content-md-center mx-0">
             <div class="col-md-6">
-                <div class="center">
+                <div class="center colorwhite">
                     <h3 class="login-title">Iniciar sesión</h3>
+                    <p *ngIf="operation == 'register' ">Ya tienes cuenta?,  has <a (click)= "operation ='login' " >login</a></p>
+                    <p *ngIf="operation == 'login' ">No tienes cuenta?,  <a (click) ="operation ='register' " >Registrate</a></p>
+                    
                 </div>
-                <div class="login_form">
+                <div class="login__container-form">
                     <input class="form-control" type="email" placeholder="Ingresar Email">
                     <input class="form-control" type="password" placeholder="Ingresar Contraseña">
-                    <input class="form-control" type="text" placeholder="Ingresar Nick">
+                    <input *ngIf="operation == 'register' " class="form-control" type="text" placeholder="Ingresar Nick">
+                    <div class="btn__section center">
+                        <a *ngIf="operation == 'login' " href="" class="btn btn-primary">Iniciar sesión</a>
+                        <a *ngIf="operation == 'register' " href="" class="btn btn-primary">Registrarme</a>
+                    </div>
                 </div>
+         
             </div>
         </div>
+
     </div>
 </div>
 
