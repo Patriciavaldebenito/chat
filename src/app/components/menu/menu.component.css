@@ -47,10 +47,23 @@
 }
 
 .item a:hover {
-  font-weight: 600;
-  font-size: 1.5rem;
-    zoom: 1.25;
-    letter-spacing: 1.25px;
-    text-decoration: underline;
+    font-weight: 600;
+    font-size: 1.25rem;
+      zoom: 1.15;
+      letter-spacing: 1.1px;
+      text-decoration: underline;
+  
+  }
 
-}
+
+  @media(min-width:767px){
+      
+    .item a:hover {
+        font-weight: 600;
+        font-size: 1.5rem;
+        zoom: 1.25;
+        letter-spacing: 1.25px;
+        text-decoration: underline;
+    
+    }
+  }

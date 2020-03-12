@@ -1,5 +1,39 @@
-<input type="text" placeholder="Buscar amigos" [(ngModel)]="query">
-<br>
+
+
+<div class="home__container">
+ <div class="home__container__header">
+   <div class="home__container__header-avatar">
+      <div class="row">
+        <div class="col-sm-3">
+          <img class="header-image" src="../../../assets/images/recursos_varios/women_more_dialog.png" alt="">
+        </div>
+        <div class="col">
+          <b>patricia</b>
+          <div>
+            <span>Online</span>
+            <br>
+            <span> |Escribe un mensaje personal|</span>
+          </div>
+        </div>
+      </div>
+   </div>
+ </div>
+
+ <div class="home__container__main">
+   <div class="home__container__main-search">
+     <div class="row">
+       <div class="col-10"> 
+          <input type="text" class="form-control" placeholder="Buscar amigos" [(ngModel)]="query">
+        </div>
+        <div class="col-2">
+          <img src="../../../assets/images/icon/add.png" class="icon" alt="">
+        </div>
+     </div>
+  
+  
+   </div>
+ </div>
+<!-- 
 <h4>Amigos</h4>
 <ng-container *ngFor="let user of friends | search:query" >
   <div>
@@ -7,5 +41,5 @@
         {{ user.name }} - {{ user.email }} -{{user.friend}}
     </a>
 </div>
-
-
+</ng-container> -->
+</div>

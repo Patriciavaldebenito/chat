@@ -1,0 +1,37 @@
+.home__container{
+    background-color: #041256;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.home__container__header{
+    padding: 1em;
+}
+.home__container__header-avatar{
+    background-color:#607d8b40;
+    color: #fff;
+
+}
+
+.header-image{
+    max-width: 100px;
+}
+
+/*MAIN*/
+.home__container__main{
+    padding: 1em ;
+}
+
+
+.home__container__main-search .row{
+    align-items: center;
+}
+input{
+    width: 100%;
+}
+
+.icon{
+    margin-top:0.5em;
+    width: 50px;
+    height: 28px;
+}
